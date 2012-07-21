@@ -1,0 +1,265 @@
+#{extends 'base.html' /}
+#{set title:'物流发货网 - 物流专线' /}
+<div class="header">
+    <ul class="nav-list">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">手机客户端</a></li>
+        <li><a href="#">移动版</a></li>
+    </ul>
+    #{if session.username}
+    <div class="top-tools">
+        <span class="light-comment" >您好，${session.username}&nbsp;</span>
+        <a href="@{Accounts.profileForm}">账号设置</a>
+        <a href="@{Secure.logout}">退出</a>
+    </div>
+    #{/if}
+    #{else}
+    <div class="top-tools">
+        <a href="@{Secure.login}" class="">登录</a>
+        <a href="@{Application.signup}" class="">免费注册</a>
+    </div>
+    #{/else}
+</div>
+<div class="linesearch-panel">
+    <div class="logo"></div>
+    <form class="linesearch-form" action="@{Lines.list}" method="get">
+        <input type="hidden" name="origin.code"/>
+        <input type="hidden" name="destination.code"/>
+        <div class="input-wrapper">
+            <input type="text" name="origin.name" class="input-text" id="input-origin">
+            <span class="place-holder">始发地</span>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="destination.name" class="input-text" id="index-destination">
+            <span class="place-holder">目的地</span>
+        </div>
+        <button type="submit" class="button search">搜索</button>
+    </form>
+</div>
+<div class="page">
+    <div class="map-panel">
+        <img src="/public/images/map.png" alt="地图">
+    </div>
+    <div id="spsizer" class="list-panel">
+        <ul class="line-list">
+            <li class="clearfix">
+                <div class="iconA"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconB"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconC"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconD"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconE"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconF"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconG"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconH"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconI"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="iconJ"></div>
+                <div class="record">
+                    <div class="name">
+                        <span>山东宇鑫物流有限公司</span>
+                        <span class="arrow-down"></span>
+                    </div>
+                    <div>
+                        <span class="address">山东省济南市天桥区</span>
+                    </div>
+                    <div>
+                        <span class="contact">联系人：李先生</span>
+                        <span class="phone">电话：0531-67750855</span>
+                    </div>
+                    <div>
+                        <p class="intro">山东宇鑫物流有限公司是中国物流实验基地、中国物流百强企业、国家AAAA级综合服务型物流企业、中国中部企业领袖年会最具成长力企业、国家发改委现代物流重点</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="pg-bar clearfix">
+            <div  class="pg">
+                <a href="#">上一页</a>
+                <span class="current">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">下一页</a>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="comment">corpyright&copy;2009-2012</span>
+            <span class="comment">版权所有 山东大成软件有限公司</span><br/>
+            <span class="comment">备案/许可证号：鲁ICP备10200028号-2</span>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    var resizeHeight = $(window).height()-100;
+    $(".list-panel").height(resizeHeight);
+    $(".map-panel").height(resizeHeight);
+    $(window).resize(function() {
+        // console.log("windows resized");
+        resizeHeight = $(window).height() - 100;
+        $(".list-panel").height(resizeHeight);
+        $(".map-panel").height(resizeHeight);
+    });
+});
+</script>
+

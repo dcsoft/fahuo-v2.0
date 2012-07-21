@@ -1,0 +1,55 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+##########################################################################
+#
+# 基础功能
+#
+##########################################################################
+
+# 应用级
+GET     /                                       Application.index
+GET     /signup                                 Application.signup
+POST    /signup                                 Application.signupCommit
+GET     /mobile-app                             Application.mobileApp
+GET     /mobile-web                             Application.mobileWeb
+GET     /retrieve-pass                          Application.retrievePassForm
+POST    /retrieve-pass                          Application.retrievePass
+GET     /captcha                                Application.captcha
+GET     /error404                               Application.error404
+GET     /error500                               Application.error500
+# 线路运价
+GET     /lines                                  Lines.list
+GET     /lines/place                            Lines.place
+GET     /lines/info                             Lines.info
+
+
+# 帮助中心
+GET     /help                                   Help.about
+GET     /help/about                             Help.about
+GET     /help/faq                               Help.faq
+GET     /help/contactus                         Help.contactus
+GET     /help/cooperation                       Help.cooperation
+
+# 账户
+GET     /accounts/profile                       Accounts.profileForm
+POST    /accounts/profile                       Accounts.profileSave
+GET     /accounts/mobile                        Accounts.mobileForm
+POST    /accounts/mobile                        Accounts.mobileSave
+GET     /accounts/email                         Accounts.emailForm
+POST    /accounts/email                         Accounts.emailSave
+GET     /accounts/password                      Accounts.passwordForm
+POST    /accounts/password                      Accounts.passwordSave
+
+# Import Secure rotes
+*       /                                        module:secure
+
+# Ignore favicon requests
+GET     /favicon.ico                             404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                 staticDir:public
+
+# Catch all
+*       /{controller}/{action}                   {controller}.{action}

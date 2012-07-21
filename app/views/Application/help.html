@@ -1,0 +1,30 @@
+#{extends 'main.html' /}
+#{set title:'帮助中心 - 物流发货网' /}
+<div class="banner">
+    <div class="container">
+        <div class="logo"></div>
+        <div class="separator"></div>
+        <h1>帮助中心</h1>
+    </div>
+</div>
+<div class="container help clearfix">
+    <div class="sidebar-left fl">
+        <ul class="menu">
+            <li #{if request.actionMethod=="about"}class="current"#{/if}>
+                <a href="#">关于物流发货网</a>
+            </li>
+            <li #{if request.actionMethod=="faq"}class="current"#{/if}>
+                <a href="#">常见问题</a>
+            </li>
+            <li #{if request.actionMethod=="contactus"}class="current"#{/if}>
+                <a href="#">联系我们</a>
+            </li>
+            <li #{if request.actionMethod=="cooperation"}class="current"#{/if}>
+                <a href="#">欢迎合作</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mywuliu-content">
+        #{doLayout /}
+    </div>
+</div>

@@ -1,0 +1,42 @@
+#{extends 'main.html' /}
+<div class="container company clearfix">
+    <h1 class="title">山东佳怡物流有限公司</h1>
+    <ul class="company-nav clearfix">
+        <li #{if request.actionMethod=='index'}class="current"#{/if}}>
+            <a  href="@{Companys.index}">首页</a>
+        </li>
+        <li #{if request.actionMethod=='introduction'}class="current"#{/if}>
+            <a  href="@{Companys.introduction}">公司介绍</a>
+        </li>
+        <li #{if request.actionMethod=='branchList' || request.actionMethod=='branchShow'}class="current"#{/if}>
+            <a  href="@{Companys.branchList}">网点介绍</a>
+        </li>
+        <li #{if request.actionMethod=='lineList'}class="current"#{/if}>
+            <a  href="@{Companys.lineList}">线路运价</a>
+        </li>
+        <li #{if request.actionMethod=='score'}class="current"#{/if}>
+            <a  href="@{Companys.score}">商铺评分</a>
+        </li>
+        <li #{if request.actionMethod=='product'}#{/if}>
+            <a class="current" href="@{Companys.product}">产品及服务</a>
+        </li>
+        <li #{if request.actionMethod=='contactUs'}class="current"#{/if}>
+            <a href="@{Companys.contactUs}">联系我们</a>
+        </li>
+    </ul>
+    <div class="company-info fl">
+        <div class="top">山东佳怡物流有限公司</div>
+        <div class="middle">
+            <p>经营模式：商务合作</p>
+            <p>服务线路：120条</p>
+            <p>服务网点：456家</p>
+        </div>
+        <div class="bottom">
+            <p>联系电话：</p>
+            <p>0531-82659278</p>
+        </div>
+    </div>
+    <div class="company-content">
+        #{doLayout /}
+    </div>
+</div>

@@ -1,0 +1,20 @@
+#{extends 'account.html' /}
+#{set title:'物流发货网 - 邮箱验证' /}
+<h1>邮箱验证</h1>
+<div>
+    <form action="@{Accounts.emailSave}" method="post" class="account-form">
+        <dl>
+            <dt>邮箱：</dt>
+            <dd>
+                <input type="text" class="input-text" name="email" value="" id="email"/>
+                <br />
+                <a href="#" class="button small">发送验证码</a>
+            </dd>
+            <dt>验证码：</dt>
+            <dd><input type="text" class="input-text" name="valicode" value="" id="valicode"/></dd>
+        </dl>
+        <div class="submit-bar">
+            <button type="submit" class="button submit">保存</button>
+        </div>
+    </form>
+</div>

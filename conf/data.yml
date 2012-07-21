@@ -1,0 +1,27 @@
+
+# Users
+
+models.User(niubo):
+    username:    niubo
+    password:    pass
+    name:        牛博
+    sex:         1
+    email:       niubo_@126.com
+    telephone:   053186303127
+    mobilephone: 15212345678
+    fax:         053186303128
+    signupDate:  2012-05-11
+    status:      1
+    
+models.User(demo):
+    username:    demo
+    password:    demo
+    name:        测试用户
+    sex:         0
+    email:       demo@126.com
+    telephone:   053186303127
+    mobilephone: 15212344527
+    fax:         053186303128
+    signupDate:  2012-05-11
+    status:      1
+    

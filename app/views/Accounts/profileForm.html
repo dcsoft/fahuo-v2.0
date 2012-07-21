@@ -1,0 +1,43 @@
+#{extends 'account.html' /}
+#{set title:'物流发货网 - 个人资料' /}
+<h1>修改个人资料</h1>
+<form action="@{Accounts.profileSave}" method="post" class="account-form">
+    <dl>
+        <dt><label for="name">姓名：</label></dt>
+        <dd><input type="text" class="input-text" name="name" id="name" /></dd>
+        <dt>性别:</dt>
+        <dd>
+            <input type="radio" name="sex" id="sex-male" value="1" checked="checked" />
+            <label for="sex-male">先生</label>
+            <input type="radio" name="sex" id="sex-female" value="0" />
+            <label for="sex-female">女士</label>
+        </dd>
+        <dt><label for="mobilephone">手机号码：</label></dt>
+        <dd><input type="text" class="input-text" name="mobilephone" id="mobilephone" value="" /></dd>
+        <dt><label for="telephone">固定电话：</label></dt>
+        <dd><input type="text" class="input-text" name="telephone" id="telephone" value="" /></dd>
+        <dt><label for="email">邮箱：</label></dt>
+        <dd><input type="text" class="input-text" name="email" id="email" value="" /></dd>
+        <dt><label for="fax">传真：</label></dt>
+        <dd><input type="text" class="input-text" name="fax" id="fax" value="" /></dd>
+        <dt>联系地址：</dt>
+        <dd>
+            <select>
+                <option value="">请选择</option>
+            </select>
+            <select>
+                <option value="">请选择</option>
+            </select>
+            <select>
+                <option value="">请选择</option>
+            </select>
+            <br />
+            <input type="text" class="input-text" name="streetAddress" value="请输入街道地址" />
+        </dd>
+        <dt><label for="zipcode">邮编：</label></dt>
+        <dd><input type="text" class="input-text" name="zipcode" value="" /></dd>
+    </dl>
+    <div class="submit-bar">
+        <button type="submit" class="button submit">保存</button>
+    </div>
+</form>

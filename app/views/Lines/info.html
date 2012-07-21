@@ -1,0 +1,89 @@
+#{extends 'main.html' /}
+#{set title:'物流发货网 - 信息纠错' /}
+<div class="banner">
+    <div class="container">
+        <div class="logo"></div>
+        <div class="separator"></div>
+        <h1>信息纠错</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <div class="instruction">
+            <p class="text">以下信息正确吗？</p>
+            <p class="comment">点击下面的任意详情报告或纠正不准确的信息</p>
+        </div>
+        <form class="info-form" action="#" onsubmit="return false">
+            <ul class="form-list">
+                <li class="expanded">
+                    <div class="arrow-expanded"></div>
+                    <div class="info">
+                        <div class="fixed">
+                            <span class="name">公司名</span><br>
+                            <span class="data invalid">山东佳怡物流专线</span><br>
+                        </div>
+                        <div class="scalable">
+                            <span>您已将此名称标记为不正确！</span>
+                            <a href="#" class="cancel">撤销</a><br>
+                            <span class="label">如果您知道正确的名字，请在此输入：</span><br>
+                            <input type="text" class="input-text" name="name">
+                            <input type="hidden" name="markName" value="false">
+                        </div>
+                    </div>
+                </li>
+                <li class="folded">
+                    <div class="arrow-folded"></div>
+                    <div class="info">
+                        <div class="fixed">
+                            <span class="name">地址</span><br>
+                            <span class="data">山东省济南市</span>
+                        </div>
+                        <div class="scalable hidden">
+                            <span>您已将此地址标记为不正确！</span>
+                            <a href="#" class="cancel">撤销</a><br>
+                            <span class="label">如果您知道正确的地址，请在此输入：</span><br>
+                            <input type="text" class="input-text" name="address">
+                            <input type="hidden" name="markAddress" value="false">
+                        </div>
+                    </div>
+                </li>
+                <li class="folded">
+                    <div class="arrow-folded"></div>
+                    <div class="info">
+                        <div class="fixed">
+                            <span class="name">联系人</span><br>
+                            <span class="data">李先生</span>
+                        </div>
+                        <div class="scalable hidden">
+                            <span>您已将此联系人标记为不正确！</span>
+                            <a href="#" class="cancel">撤销</a><br>
+                            <span class="label">如果您知道正确的联系人，请在此输入：</span><br>
+                            <input type="text" class="input-text" name="contact">
+                            <input type="hidden" name="markContact" value="false">
+                        </div>
+                    </div>
+                </li>
+                <li class="folded">
+                    <div class="arrow-folded"></div>
+                    <div class="info">
+                        <div class="fixed">
+                            <span class="name">联系电话</span><br>
+                            <span class="data">0531-88567894</span>
+                        </div>
+                        <div class="scalable hidden">
+                            <span>您已将此联系电话标记为不正确！</span>
+                            <a href="#" class="cancel">撤销</a><br>
+                            <span class="label">如果您知道正确的联系电话，请在此输入：</span><br>
+                            <input type="text" class="input-text" name="phone">
+                            <input type="hidden" name="markPhone" value="false">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="submit-bar">
+                <button class="button submit" type="submit">提交</button>
+                <button class="button">取消</button>
+            </div>
+        </form>
+    </div>
+</div>

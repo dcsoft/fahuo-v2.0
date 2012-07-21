@@ -1,0 +1,99 @@
+/*  reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal}
+ol,ul {list-style:none}
+caption,th {text-align:left}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal}
+q:before,q:after {content:''}
+abbr,acronym {border:0}
+.bw{word-wrap:break-word;}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{display:inline-block}* html.clearfix{height::1%}.clearfix{display:block}
+.hidden{display:none;}
+.invisible{visibility:hidden}
+
+/*   default   */
+html{overflow-y:scroll;}
+body,input,button,textarea,select,option,optgroup{font-size:12px;font-family:Tahoma,Microsoft YaHei,Arial,Helvetica,sans-serif;color:#333;}
+label{display:inline-block;}
+a{color:#ff8800;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+
+/* commens  */
+.required{color:red;}
+.error-message{color:red;}
+.info-message{color:#999999;}
+.cbtn-long{display:inline-block;width:101px;height:27px;line-height:27px;text-align:center;background:url(../images/btn.png);border:none;color:#ffffff;cursor:pointer;vertical-align:middle;}
+.cbtn-long:hover{background-position:-120px 0;text-decoration:none;}
+.cbtn-small{display:inline-block;width:95px;height:32px;line-height:32px;text-align:center;background:url(../images/btn.png) 0 -41px;border:none;color:#ffffff;cursor:pointer;}
+.cbtn-small:hover{background-position:-110px -41px;text-decoration:none;}
+.cbtn-medium{display:inline-block;width:120px;height:37px;line-height:37px;text-align:center;background:url(../images/btn.png) 0 -91px;border:none;font-size:14px;color:#ffffff;cursor:pointer;}
+.cbtn-medium:hover{background-position: -134px -91px;text-decoration:none;}
+.cbtn-large{display:inline-block;width:149px;height:50px;line-height:50px;text-align:center;background:url(../images/btn.png) 0 -147px;border:none;color:#ffffff;cursor:pointer;}
+.cbtn-large:hover{background-position:-164px -147px;text-decoration:none;}
+.button{display:inline-block;white-space:nowrap;background-color:#ddd;border:1px solid #777;padding:0 24px;margin:5px;font-size:12px;line-height:32px;text-decoration:none;color:#333;border-radius:2px;box-shadow:0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);}
+
+.button:hover{background-color:#eee;text-decoration:none;}
+.button:active{box-shadow:0 0 4px 2px rgba(0,0,0,.3) inset;}
+.button:focus{outline:0;background:#fafafa;}
+.button:before{background: #ccc;background: rgba(0,0,0,.1);float:left;width:1em;text-align:center;font-size:18px;margin:0 16px 0 -24px;padding:0 5px;box-shadow:1px 0 0 rgba(0,0,0,.5),2px 0 0 rgba(255,255,255,.5);border-radius:2px 0 0 2px;}
+/* Buttons and inputs */
+button.button,input.button{cursor:pointer;overflow:visible;/* removes extra side spacing in IE */}
+/* removes extra inner spacing in Firefox */
+button::-moz-focus-inner{border:0;padding:0;}
+/* If line-height can't be modified,then fix Firefox spacing with padding */
+input::-moz-focus-inner{padding:.4em;}
+/* The disabled styles */
+.button[disabled],.button[disabled]:hover,.button.disabled,.button.disabled:hover{background:#eee;color:#aaa;border-color:#aaa;cursor:default;text-shadow:none;position:static;box-shadow:none;}
+
+.highlight, .submit{background-color:#ff8800;color:#fff;}
+.highlight:hover, .submit:hover{background-color:#ffaa00;}
+.highlight:focus, .submit:hover{outline:0;background:#ffaa00;}
+
+.small{line-height:24px;}
+.large{line-height:36px;padding:0 32px;font-size:14px;font-weight:bold;}
+/* Hexadecimal entities for the icons */
+.add{background-color:#83ae02;color:#fff;}
+.add:hover{background-color:#a1cc21;}
+.add:focus{outline:0;background-color:#a1cc21;}
+.add:before{content:"\271A";}
+.edit:before{content:"\270E";}
+.delete:before{content:"\2718";}
+.save:before{content:"\2714";}
+.email:before{content:"\2709";}
+.like:before{content:"\2764";}
+.next:before{content:"\279C";}
+.star:before{content:"\2605";}
+.spark:before{content:"\2737";}
+.play:before{content:"\25B6";}
+
+.search-form{border:none;}
+.search-form table{border-collapse: separate;border-spacing:5px;width:100%;}
+.search-form label{line-height:24px;}
+.search-form input{height:24px;padding:0 5px;border:1px solid #cacaca;vertical-align:middle;}
+.search-form select{padding:4px 3px;width:132px;border:1px solid #cacaca;}
+
+.data-table{margin-top:10px;width:100%;}
+.data-table thead{background-color:#e3e3e3;border:1px solid #d8d8d8;}
+.data-table thead th{padding:12px 10px;font-weight:bold;text-align:center;}
+.data-table tbody tr:hover{background:#ffc;}
+.data-table tbody td{padding:12px 10px;border-bottom:1px solid #d8d8d8;}
+/*.data-table .even td{background-color:#f3f3f3;}*/
+
+
+.pg{float:right;display:inline;line-height:26px;margin:10px;}
+.pg .current{font-weight:bold;color:#ff8800;}
+.pg a, .pg span{float:left;display:inline;margin-left:4px;padding:0 8px;height:26px;color:#333;border:1px solid #d8d8d8;}
+.pg a:hover{border-color:#ff8800;text-decoration:none;}
+.h-separator{border-bottom:1px solid #e5e5e5;margin:10px 0}
+
+.dialog{border:1px solid #666;background-color:#ffffff;width:640px;height:350px;position:absolute;top:150px;left:150px;z-index:10;}
+.dialog .title{border-bottom:1px solid #666;line-height:36px;padding:2px;}
+.dialog .title h1{padding-left:10px;font-size:14px;font-weight:bold;background-color:#666;color:#ffffff;}
+.dialog .title .btn-close{float:right;display:inline;margin:5px 10px 0 0;color:#fff;padding:0 10px;line-height:24px;border:1px solid transparent;}
+.dialog .title .btn-close:hover{color:#fff;text-decoration:none;border:1px solid #fff;}
+.dialog form{border:none;}

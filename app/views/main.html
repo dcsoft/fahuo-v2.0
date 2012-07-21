@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>#{get 'title' /}</title>
+<meta charset="${_response_encoding}" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/style.css'}">
+#{get 'moreStyles' /}
+<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}" />
+<script src="@{'/public/javascripts/jquery-1.7.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+#{get 'moreScripts' /}
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <ul class="nav-list">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">手机客户端</a></li>
+            <li><a href="#">移动版</a></li>
+        </ul>
+        #{if session.username}
+        <div class="top-tools">
+            <span class="light-comment" >您好，${session.username}&nbsp;</span>
+            <a href="@{Accounts.profileForm}">账号设置</a>
+            <a href="@{Secure.logout}">退出</a>
+        </div>
+        #{/if}
+        #{else}
+        <div class="top-tools">
+            <a href="@{Secure.login}" class="">登录</a>
+            <a href="@{Application.signup}" class="">免费注册</a>
+        </div>
+        #{/else}
+    </div>
+</div>
+#{doLayout /}
+<div class="footer">
+    <div class="container">
+        <a href="#">关于物流发货网</a> <span class="comment">|</span>
+        <a href="#">联系我们</a> <span class="comment">|</span>
+        <a href="#">问题与建议</a> <span class="comment">|</span>
+        <a href="#">欢迎合作</a><br />
+        
+        <span class="comment">corpyright&copy;2009-2012</span>
+        <span class="comment">版权所有 山东大成软件有限公司</span>
+        <span class="comment">备案/许可证号：鲁ICP备10200028号-2</span>
+    </div>
+</div>
+</body>
+</html>

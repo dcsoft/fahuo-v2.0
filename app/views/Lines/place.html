@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'物流发货网 - 位置纠错' /}
+<div class="banner">
+    <div class="container">
+        <div class="logo"></div>
+        <div class="separator"></div>
+        <h1>位置纠错</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <p class="text">位置标记正确吗？</p>
+        <p class="comment">拖动标记，并将其移动到正确位置</p>
+        <div class="map">
+            <img src="/public/images/map2.png" alt="地图">
+        </div>
+        <form action="#" onsubmit="return false">
+            <input type="hidden" name="location" />
+            <button class="button submit" type="submit">提交</button>
+            <button class="button">取消</button>
+        </form>
+    </div>
+</div>

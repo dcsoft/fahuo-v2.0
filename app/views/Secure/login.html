@@ -1,0 +1,58 @@
+#{extends 'main.html' /}
+#{set title:'物流发货网 - 用户登录' /}
+#{set 'moreScripts'}
+<script type="text/javascript">
+    $(function() {
+        $(".captcha-img").click(function() {
+            this.src = "@{Application.captcha}" + "?token=" + Math.random();
+        });
+    });
+
+</script>
+#{/set}
+<div class="container">
+    <div class="content login">
+        <div class="login-form">
+            <h2>会员登录</h2>
+            <form action="@{authenticate}" method="post">
+                #{if flash.error}
+                <p class="error-message login-indent">
+                    &{flash.error}
+                </p>
+                #{/if}
+                #{else}
+                <p class="error-message login-indent"></p>
+                #{/else}
+                <ul>
+                    <li>
+                        <label for="login-username">用户名</label>
+                        <input type="text" name="username" class="login-text" id="login-username"/>
+                    </li>
+                    <li>
+                        <label for="login-password">密码</label>
+                        <input type="password" name="password" class="login-text" id="login-password"/>
+                    </li>
+                    <li>
+                        <label for="login-captcha">验证码</label>
+                        <input type="text" name="capcha" class="login-text captcha" id="login-captcha"/>
+                        <img class="captcha-img" src="@{Application.captcha}" title="不区分大小写。看不清点击可换一个" alt="验证码" />
+                    </li>
+                    <li class="login-indent">
+                        <input type="checkbox" name="rememeber" checked="checked" value="1" id="login-remember"/>
+                        <label for="login-remember">两周内自动登录</label>
+                    </li>
+                    <li class="login-indent">
+                        <button class="button submit large" type="submit">
+                            登录
+                        </button>
+                        <a class="retrieve-pass" href="#">找回密码</a>
+                    </li>
+                </ul>
+            </form>
+            <div class="signup">
+                <span>还没有账号？</span>
+                <a href="@{Application.signup}">立即免费注册</a>
+            </div>
+        </div>
+    </div>
+</div>

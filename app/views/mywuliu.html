@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+<div class="container clearfix">
+    <div class="sidebar-left fl">
+        <div class="topbutton">
+            <a href="@{Orders.consign}" class="button highlight large">我要发货</a>
+        </div>
+        <ul class="mywuliu-menu">
+            <li #{if request.controller=='Orders'}class="current"#{/if}>
+                <a href="@{Orders.list}">我的运单</a>
+            </li>
+            <li #{if request.controller=='Contacts'}class="current"#{/if}>
+                <a href="@{Contacts.list}">通讯录</a>
+            </li>
+            <li #{if request.controller=='Evaluates'}class="current"#{/if}>
+                <a href="@{Evaluates.list}">我的评价</a>
+            </li>
+            <li #{if request.controller=='Complaints'}class="current"#{/if}>
+                <a href="@{Complaints.list}">我的投诉</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mywuliu-content">
+      #{doLayout /}
+    </div>
+</div>

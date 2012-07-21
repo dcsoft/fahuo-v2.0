@@ -1,0 +1,22 @@
+#{extends 'main.html' /}
+#{set title:'物流发货网 - 首页' /}
+<div class="container">
+    <div class="index-content">
+        <center>
+            <div class="index-logo" title="物流发货网"></div>
+        </center>
+        <form action="@{Lines.list}" method="get" class="clearfix">
+            <input type="hidden" name="origin.code"/>
+            <input type="hidden" name="destination.code"/>
+            <div class="input-wrapper">
+                <input type="text" name="origin.name" class="input-text" id="input-origin"/>
+                <span class="place-holder">始发地</span>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="destination" class="input-text" id="index-destination"/>
+                <span class="place-holder">目的地</span>
+            </div>
+            <button type="submit" class="button search">搜索</button>
+        </form>
+    </div>    
+</div>

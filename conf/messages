@@ -1,0 +1,5 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+secure.error=用户名或密码不正确
+secure.logout=你已经退出登录
